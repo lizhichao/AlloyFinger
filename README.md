@@ -3,33 +3,45 @@
 # Usage
 
 ```js
+//element为需要监听手势的dom对象
 new AlloyFinger(element, {
     pointStart: function () {
+        //手指触摸屏幕触发
     },
     multipointStart: function () {
+        //一个手指以上触摸屏幕触发
     },
     rotate: function (evt) {
+        //evt.angle代表两个手指旋转的角度
         console.log(evt.angle);
     },
     pinch: function (evt) {
+        //evt.scale代表两个手指缩放的比例
         console.log(evt.scale);
     },
     multipointEnd: function () {
+        //当手指离开，屏幕只剩一个手指或零个手指触发
     },
     pressMove: function (evt) {
+        //evt.deltaX和evt.deltaY代表在屏幕上移动的距离
         console.log(evt.deltaX);
         console.log(evt.deltaY);
     },
     tap: function (evt) {
+        //点按触发
     },
     doubleTap: function (evt) {
+        //双击屏幕触发
     },
     longTap: function (evt) {
+        //长按屏幕750ms触发
     },
     swipe: function (evt) {
+        //evt.direction代表滑动的方向
         console.log("swipe" + evt.direction);
     },
     singleTap: function (evt) {
+        //单击
     }
 });
 ```
